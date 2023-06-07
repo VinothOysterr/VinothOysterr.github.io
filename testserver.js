@@ -117,8 +117,17 @@ app.get("/T6",(req,res)=>{
 
 app.get('/home', async (req, res) => {
     try {
-      const response = await axios.get('http://127.0.0.1:5000/post');
-      const data = response.data;
+      // const response = await axios.get('http://127.0.0.1:5000/post');
+      // const data = response.data;
+       
+       const data = {
+			"T_1": 1,
+			"T_2": 0,
+			"T_3": 1,
+			"T_4": 0,
+			"T_5": 1,
+			"T_6": 0,
+		}
   
       res.render('home.html', { data: data });
   
