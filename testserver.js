@@ -109,7 +109,7 @@ app.post("/T6",(req,res)=>{
 app.get("/T6",(req,res)=>{
    
     // res.send(JSON.stringify(reqData));
-    const reqdata = {
+    const reqData = {
 		"T_1": 0,
 		"T_2": 1,
 		"T_3": 0,
@@ -125,7 +125,7 @@ app.get("/T6",(req,res)=>{
 
 app.get('/home', async (req, res) => {
     try {
-      const response = await axios.get('/T6');
+      const response = await axios.get('https://sample-7us9.onrender.com/T6');
       const data = response.data;
        
        //const data = {
