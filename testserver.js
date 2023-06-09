@@ -108,8 +108,16 @@ app.post("/T6",(req,res)=>{
 })
 app.get("/T6",(req,res)=>{
    
-    res.send(JSON.stringify(reqData));
-   // res.json(reqData)
+    // res.send(JSON.stringify(reqData));
+    const reqdata = {
+		"T_1": 0,
+		"T_2": 1,
+		"T_3": 0,
+		"T_4": 1,
+		"T_5": 0,
+		"T_6": 1,
+		}
+    res.json(reqData)
     console.log(reqData)
 })
 
@@ -117,7 +125,7 @@ app.get("/T6",(req,res)=>{
 
 app.get('/home', async (req, res) => {
     try {
-      const response = await axios.get('https://vinothpk.pythonanywhere.com/post');
+      const response = await axios.get('/T6');
       const data = response.data;
        
        //const data = {
