@@ -3,12 +3,12 @@ var bodyParser = require('body-parser');
 
 var app = express();
 var PORT = 8000;
+// const PORT = process.env.PORT || 8000;
 
 ////
 const axios = require('axios');
 const path = require('path');
-app.set('view engine', 'html');
-app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static('public'));
 ////
@@ -118,7 +118,7 @@ app.get("/T6",(req,res)=>{
 		"T_6": 1,
 		}
     res.json(reqData)
-    console.log(reqData)
+    // console.log(reqData)
 })
 
 // Start
@@ -127,17 +127,8 @@ app.get('/home', async (req, res) => {
     try {
       const response = await axios.get('https://sample-7us9.onrender.com/T6');
       const data = response.data;
-       
-       //const data = {
-			//"T_1": 1,
-			//"T_2": 0,
-			//"T_3": 1,
-			//"T_4": 0,
-			//"T_5": 1,
-			//"T_6": 0,
-		//}
   
-      res.render('home.html', { data: data });
+      res.render('home', { data: data });
   
     } catch (error) {
       console.error(error);
