@@ -125,7 +125,8 @@ app.get("/T6",(req,res)=>{
 
 app.get('/home', async (req, res) => {
     try {
-      const response = await axios.get('https://sample-7us9.onrender.com/T6');
+      // const response = await axios.get('https://sample-7us9.onrender.com/T6');
+	const response = await axios.get('https://f7bd-2401-4900-1f2b-5fa1-7566-1e10-d9f-bc01.in.ngrok.io/post');
       const data = response.data;
   
       res.render('home', { data: data });
