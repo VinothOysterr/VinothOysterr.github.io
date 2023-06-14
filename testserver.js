@@ -8,7 +8,8 @@ var PORT = 8000;
 ////
 const axios = require('axios');
 const path = require('path');
-app.set('view engine', 'ejs');
+app.set('view engine', 'html');
+app.engine('html', require('ejs').renderFile);
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static('public'));
 ////
@@ -130,7 +131,7 @@ app.get('/home', async (req, res) => {
 	 const response = await axios.get('http://52.41.36.82/post');
       const data = response.data;
   
-      res.render('home', { data: data });
+      res.render('home.html', { data: data });
   
     } catch (error) {
       console.error(error);
