@@ -68,8 +68,35 @@ app.post("/T2",(req,res)=>{
 })
 app.get("/T2",(req,res)=>{
 
-    res.send(JSON.stringify(reqData));
-    console.log(reqData)
+    res.send(JSON.stringify([
+  {
+    "st_name": "Andhra Pradesh",
+    "year": "1978.0",
+    "ac_no": "1",
+    "ac_name": "Ichapuram",
+    "ac_type": "GEN",
+    "cand_name": "Manabala Ramarao",
+    "cand_sex": "M",
+    "partyname": "Independent",
+    "partyabbre": "IND",
+    "totvotpoll": "813.0",
+    "electors": "83247"
+  },
+  {
+    "st_name": "Andhra Pradesh",
+    "year": "1978.0",
+    "ac_no": "1",
+    "ac_name": "Ichapuram",
+    "ac_type": "GEN",
+    "cand_name": "Appadu Sahu",
+    "cand_sex": "M",
+    "partyname": "Independent",
+    "partyabbre": "IND",
+    "totvotpoll": "1743.0",
+    "electors": "83247"
+  }
+]));
+    // console.log(reqData)
 })
 app.post("/T3",(req,res)=>{
 
