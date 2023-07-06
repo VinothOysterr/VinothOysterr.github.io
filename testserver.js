@@ -85,16 +85,16 @@ app.get("/T2",(req,res)=>{
   {
     "st_name": "Andhra Pradesh",
     "year": "1978.0",
-    "ac_no": "1",
-    "ac_name": "Ichapuram",
-    "ac_type": "GEN",
-    "cand_name": "Appadu Sahu",
+    "ac_no": "10",
+    "ac_name": "Salur",
+    "ac_type": "ST",
+    "cand_name": "Lakshmi Narasimha Sahyasi Raju",
     "cand_sex": "M",
-    "partyname": "Independent",
-    "partyabbre": "IND",
-    "totvotpoll": "1743.0",
-    "electors": "83247"
-  }
+    "partyname": "Janata Party",
+    "partyabbre": "JNP",
+    "totvotpoll": "24477.0",
+    "electors": "78094"
+  },
 ]));
     // console.log(reqData)
 })
