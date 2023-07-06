@@ -82,6 +82,19 @@ app.get("/T2",(req,res)=>{
     "totvotpoll": "813.0",
     "electors": "83247"
   },
+ {
+    "st_name": "Andhra Pradesh",
+    "year": "1978.0",
+    "ac_no": "9",
+    "ac_name": "Parvathipuram",
+    "ac_type": "GEN",
+    "cand_name": "Krishnamurthy Naidu Vasireddi",
+    "cand_sex": "M",
+    "partyname": "Indian National Congress",
+    "partyabbre": "INC",
+    "totvotpoll": "17671.0",
+    "electors": "82282"
+  },
   {
     "st_name": "Andhra Pradesh",
     "year": "1978.0",
